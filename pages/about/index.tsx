@@ -1,13 +1,13 @@
-import { FunctionComponent } from "react";
+import { NextPage } from "next";
+import Meta from "../../components/Meta";
 
-interface AboutProps {
-    
-}
- 
-const about: FunctionComponent<AboutProps> = ():JSX.Element => {
-    return ( 
-        <h1>About Page</h1>
-     );
-}
- 
+const about: NextPage = () => {
+  return (
+    <>
+      <Meta title="About" description="Dev news about page" />
+      <h1>About Page</h1>
+    </>
+  );
+};
+
 export default about;

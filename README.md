@@ -6,9 +6,8 @@ This app is built with nextjs and typescript.
 - Nextjs
 - Typescript
 
-# Next.js Crash Course Project
-
-Project from my Next.js crash course on YouTube
+## Live demo
+- [Dev news](https://nextjs-dev-news-app.vercel.app/)
 
 ### Clone the project
 
