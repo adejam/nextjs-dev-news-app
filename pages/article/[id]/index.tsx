@@ -1,7 +1,7 @@
 import { server } from '../../../config'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-// import Meta from '../../../components/Meta'
+import Meta from '../../../components/Meta'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 export type ArticleItemType = {
@@ -21,7 +21,7 @@ const article = ({article:{title, body, excerpt}}: ArticleItemProps) => {
 
   return (
     <>
-      {/* <Meta title={article.title} description={article.excerpt} /> */}
+      <Meta title={title} description={excerpt} />
       <h1>{title}</h1>
       <p>{body}</p>
       <br />

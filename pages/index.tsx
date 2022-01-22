@@ -11,11 +11,6 @@ interface HomeProps {
 const Home = ({articles}: HomeProps): JSX.Element => {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Dev News</title>
-        <meta name="description" content="Dev News" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <h1 className="ta-center">Welcome to Dev News</h1>
       <div className="mt-50">
         <ArticleList articles={articles} />
