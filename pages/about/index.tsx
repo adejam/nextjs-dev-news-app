@@ -1,10 +1,6 @@
-import { FunctionComponent } from "react";
+import { NextPage } from "next";
 
-interface AboutProps {
-    
-}
- 
-const about: FunctionComponent<AboutProps> = ():JSX.Element => {
+const about:NextPage = () => {
     return ( 
         <h1>About Page</h1>
      );
