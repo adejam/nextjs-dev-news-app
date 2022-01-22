@@ -1,4 +1,4 @@
-// import { server } from '../../../config'
+import { server } from '../../../config'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 // import Meta from '../../../components/Meta'
@@ -31,9 +31,11 @@ const article = ({article:{title, body, excerpt}}: ArticleItemProps) => {
 }
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
-  )
+//   const res = await fetch(
+//     `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
+//   )
+
+  const res = await fetch(`${server}/api/articles/${context.params.id}`)
 
   const article = await res.json()
 
@@ -45,7 +47,8 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+  const res = await fetch(`${server}/api/articles`)
 
   const articles = await res.json()
 
